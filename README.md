@@ -32,9 +32,14 @@
 ### 💾 数据持久化
 - 使用 localStorage 自动保存所有数据
 - 刷新页面后数据不丢失
-- 支持导入/导出功能（计划中）
+- 支持导入/导出功能（JSON/CSV格式）
 
 ## 使用说明
+
+### 导入/导出课程
+1. **导出JSON**：点击"导出JSON"按钮，下载包含所有课程和时间设置的JSON文件
+2. **导出CSV**：点击"导出CSV"按钮，下载CSV格式的课程表，方便在Excel中查看
+3. **导入**：点击"导入"按钮，选择之前导出的JSON或CSV文件，恢复课程数据
 
 ### 添加课程
 1. 选择星期（周一至周日）
@@ -113,13 +118,13 @@
 
 ## 开发信息
 
-- **版本**：1.0.0
+- **版本**：1.1.0
 - **开发时间**：2024-2025
 - **技术栈**：HTML5 + CSS3 + JavaScript (ES6+)
 
 ## 后续计划
 
-- [ ] 导入/导出课程表（JSON/CSV格式）
+- [x] 导入/导出课程表（JSON/CSV格式）
 - [ ] 打印课程表功能
 - [ ] 课程备注和详情功能
 - [ ] 多学期管理
@@ -162,9 +167,14 @@ Directly download the index.html file to your computer and start your use.
 #### 💾 Data Persistence
 - Automatically save all data using localStorage
 - Data is not lost after refreshing the page
-- Support import/export (planned)
+- Support import/export (JSON/CSV format)
 
 ### Usage Guide
+
+#### Import/Export Courses
+1. **Export JSON**: Click "Export JSON" button to download a JSON file containing all courses and time settings
+2. **Export CSV**: Click "Export CSV" button to download a CSV format timetable, convenient for viewing in Excel
+3. **Import**: Click "Import" button and select a previously exported JSON or CSV file to restore course data
 
 #### Adding Courses
 1. Select day of the week (Monday to Sunday)
@@ -243,13 +253,13 @@ Data is stored in browser's localStorage:
 
 ### Development Info
 
-- **Version**: 1.0.0
+- **Version**: 1.1.0
 - **Development Time**: 2024-2025
 - **Tech Stack**: HTML5 + CSS3 + JavaScript (ES6+)
 
 ### Roadmap
 
-- [ ] Import/export timetable (JSON/CSV format)
+- [x] Import/export timetable (JSON/CSV format)
 - [ ] Print timetable function
 - [ ] Course notes and details
 - [ ] Multi-semester management
