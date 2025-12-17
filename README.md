@@ -8,6 +8,8 @@
 
 一个功能完善的在线课程表管理工具，支持课程添加、编辑、删除和时间自定义等功能。
 
+直接将index.html下载到本地即可使用。
+
 ## 功能特性
 
 ### 📅 课程管理
@@ -135,6 +137,8 @@
 ## English
 
 A full-featured online timetable management tool that supports course addition, editing, deletion, and custom time settings.
+
+Directly download the index.html file to your computer and start your use.
 
 ### 📅 Features
 
