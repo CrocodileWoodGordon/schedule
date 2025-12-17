@@ -457,7 +457,7 @@
 
 		function exportJSON() {
 			const exportData = {
-				version: '1.0',
+				version: '1.1',
 				exportDate: new Date().toISOString(),
 				slots: slots,
 				data: data
@@ -555,6 +555,7 @@
 				if (!matches || matches.length < 3) continue;
 				
 				const dayName = matches[0].replace(/[",]/g, '').trim();
+				const slotInfo = matches[1].replace(/[",]/g, '').trim();
 				const courseInfo = matches[2].replace(/[",]/g, '').trim().replace(/""/g, '"');
 				
 				const dayIndex = days.indexOf(dayName);
@@ -562,15 +563,15 @@
 				
 				const day = dayIndex + 1;
 				
-				// Find matching slot
-				for (let slot = 1; slot <= 14; slot++) {
-					const k = key(day, slot);
-					// Check if this slot doesn't already have data (to avoid duplicates)
-					if (!newData[k]) {
-						newData[k] = { text: courseInfo, day, slot };
-						break;
-					}
-				}
+				// Extract slot number from slot info (e.g., "第1节 8:00-8:45" -> 1)
+				const slotMatch = slotInfo.match(/第(\d+)节/);
+				if (!slotMatch) continue;
+				
+				const slot = parseInt(slotMatch[1], 10);
+				if (slot < 1 || slot > 14) continue;
+				
+				const k = key(day, slot);
+				newData[k] = { text: courseInfo, day, slot };
 			}
 			
 			data = newData;
